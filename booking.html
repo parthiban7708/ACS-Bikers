@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bike Booking</title>
+     <link rel="icon" type="image/png" href="apple-touch-icon.png">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(to right, #000, #434343);
+            color: white;
+        }
+
+        .container {
+            width: 350px;
+            margin: 60px auto;
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 align="center">Bike Booking</h1>
+
+    <div class="container">
+
+
+        <form action="https://formsubmit.co/parthiban123@gmail.com" method="POST" onsubmit="return validateForm()">
+
+            <input type="text" name="name" placeholder="Enter Name" required>
+
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+
+            <input type="email" name="email" placeholder="Enter Your Gmail" required>
+
+            <input type="text" name="bike" placeholder="Bike Name" required>
+
+            <input type="text" name="address" placeholder="Enter Address" required>
+
+            <input type="hidden" name="_subject" value="New Bike Booking">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+
+            <input type="hidden" name="_next" value="thankyou.html">
+
+            <button type="submit">Confirm Booking</button>
+
+        </form>
+
+    </div>
+
+    <script>
+        function validateForm() {
+            let phone = document.getElementById("phone").value;
+
+            if (phone.length != 10) {
+                alert("Enter valid 10-digit phone number");
+                return false;
+            }
+
+            alert("Booking Sent to Admin!");
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>
